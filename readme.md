@@ -17,13 +17,17 @@ deep_learning/
 ├── week2/                  # Week 2 - Redes neuronales básicas
 │   ├── README.md
 │   └── ejercicio1.py
+├── week3/                  # Week 3 - Backpropagation y funciones de activación
+│   ├── README.md
+│   └── Actividad2_Backpropagation_Funciones_Activacion.ipynb
 └── ...
 ```
 
 ## Contenido por week
 
 - **Week 1:** Ejercicio neurona en 15 minutos (red vainilla, bias, comportamiento AND). Ver [week1/README.md](week1/README.md).
-- **Week 2:** Implementación de redes neuronales básicas (Perceptrón, red una capa, red multicapa). Ver [week2/README.md](week2/README.md). Aun en desarrollo
+- **Week 2:** Implementación de redes neuronales básicas (Perceptrón, red una capa, red multicapa). Ver [week2/README.md](week2/README.md).
+- **Week 3:** Actividad 2 - Backpropagation y funciones de activación (sigmoide, ReLU) en clasificación binaria. Tres modelos: perceptrón, red una capa y red multicapa. Ver [week3/README.md](week3/README.md).
 
 ## Cómo usar este repositorio
 
