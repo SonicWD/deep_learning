@@ -3,11 +3,52 @@
 **Curso:** Deep Learning - Conceptos (601539)  
 **Actividad:** Implementación de Backpropagation y Funciones de Activación en Redes Neuronales en Google Colab
 
-Este módulo implementa y valida el proceso de aprendizaje de redes neuronales mediante **backpropagation** y **funciones de activación** (sigmoide, ReLU), orientado a **clasificación binaria**.
+---
+
+## Objetivo
+
+Implementar y validar el proceso de aprendizaje de redes neuronales mediante **backpropagation** y **funciones de activación**, evidenciando cómo la red ajusta sus parámetros (pesos y sesgos) para reducir el error durante el entrenamiento, y cómo las funciones de activación influyen en el comportamiento del modelo y su capacidad de aprendizaje.
 
 ---
 
-## 📋 Contenido
+## Qué se implementó
+
+- **Tres modelos entrenables con backpropagation:** perceptrón, red de una capa y red multicapa.
+- **Dataset de clasificación binaria** (make_classification, 500 muestras, 2 características).
+- **Comparación explícita sigmoid vs ReLU** en capas ocultas (mismo modelo, misma configuración).
+- **Evolución del loss** durante el entrenamiento y métricas de accuracy (train/test).
+- **Conclusiones** sobre variación de activación, comportamiento del loss y hallazgos.
+
+---
+
+## Qué activaciones se compararon
+
+| Activación | Uso | Comparación |
+|------------|-----|-------------|
+| **Sigmoide** | Salida (todos) y capas ocultas (comparación) | Saturación de gradientes; convergencia más lenta |
+| **ReLU** | Capas ocultas (comparación) | Mejor flujo de gradientes; convergencia más rápida |
+
+---
+
+## Resultados principales
+
+- Los tres modelos alcanzan accuracy >90% en train y test.
+- ReLU en capas ocultas converge más rápido y con menor pérdida final que sigmoide (comparación directa en Sección 4.5).
+- Las curvas de pérdida muestran convergencia consistente en todos los modelos.
+
+---
+
+## Cómo ejecutar el notebook
+
+1. Abre el archivo `Actividad2_Backpropagation_Funciones_Activacion.ipynb` en [Google Colab](https://colab.research.google.com/).
+2. Ejecuta todas las celdas: **Runtime → Run all**.
+3. Revisa las curvas de pérdida, la comparación sigmoid vs ReLU y las conclusiones.
+
+**Dependencias:** `numpy`, `matplotlib`, `scikit-learn` (ya instaladas en Colab; en local: `pip install numpy matplotlib scikit-learn`).
+
+---
+
+## 📋 Contenido detallado
 
 El archivo `Actividad2_Backpropagation_Funciones_Activacion.ipynb` contiene:
 
@@ -100,7 +141,8 @@ pip install numpy matplotlib scikit-learn
 2. **Sección 2:** Perceptrón con sigmoide + backprop.
 3. **Sección 3:** Red de una capa con sigmoide + backprop.
 4. **Sección 4:** Red multicapa con ReLU (oculta) + sigmoide (salida) + backprop.
-5. **Sección 5:** Resumen de resultados y conclusiones.
+5. **Sección 4.5:** Comparación sigmoid vs ReLU (mismo modelo, misma config).
+6. **Sección 5:** Resumen de resultados y conclusiones.
 
 ---
 
