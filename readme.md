@@ -20,10 +20,14 @@ deep_learning/
 ├── week3/                  # Week 3 - Backpropagation y funciones de activación
 │   ├── README.md
 │   └── Actividad2_Backpropagation_Funciones_Activacion.ipynb
-├── week4/                  # Week 4 - Regularización en redes neuronales
-│   ├── README.md
-│   └── Actividad4_Regularizacion_Red_Neuronal.ipynb
-└── ...
+└── week4/                  # Week 4 - REA 1 (Act. 3 y Act. 4)
+    ├── README.md           # Índice de la semana 4
+    ├── actividad3/
+    │   ├── README.md       # Actividad 3 - Optimización
+    │   └── Actividad3_Optimizacion_Red_Neuronal.ipynb
+    └── actividad4/
+        ├── README.md       # Actividad 4 - Regularización
+        └── Actividad4_Regularizacion_Red_Neuronal.ipynb
 ```
 
 ## Contenido por week
@@ -31,20 +35,22 @@ deep_learning/
 - **Week 1:** Ejercicio neurona en 15 minutos (red vainilla, bias, comportamiento AND). Ver [week1/README.md](week1/README.md).
 - **Week 2:** Implementación de redes neuronales básicas (Perceptrón, red una capa, red multicapa). Ver [week2/README.md](week2/README.md).
 - **Week 3:** Actividad 2 — Backpropagation y funciones de activación (sigmoide, ReLU) en clasificación binaria. Tres modelos: perceptrón, red una capa y red multicapa; comparación explícita sigmoid vs ReLU. Ver [week3/README.md](week3/README.md).
-- **Week 4:** Actividad 4 (REA 1) — Regularización en redes neuronales: **L2** y **dropout** implementados desde cero en un MLP, **baseline** comparable, curvas de pérdida y accuracy (train/val), métricas train/val/test y alineación con la **rúbrica** (implementación, justificación, análisis, código, comparación). Notebook [`Actividad4_Regularizacion_Red_Neuronal.ipynb`](week4/Actividad4_Regularizacion_Red_Neuronal.ipynb). Ver [week4/README.md](week4/README.md).
+- **Week 4 (REA 1):** Dos entregas en subcarpetas; índice y enlaces en [week4/README.md](week4/README.md).
+  - **Actividad 3 — Optimización:** [week4/actividad3/README.md](week4/actividad3/README.md). Notebook: [week4/actividad3/Actividad3_Optimizacion_Red_Neuronal.ipynb](week4/actividad3/Actividad3_Optimizacion_Red_Neuronal.ipynb).
+  - **Actividad 4 — Regularización:** [week4/actividad4/README.md](week4/actividad4/README.md). Notebook: [week4/actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb](week4/actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb).
 
 ## Cómo usar este repositorio
 
-Los notebooks y scripts están preparados para ejecutarse en **Google Colab** o en un entorno local con Python 3 y las dependencias indicadas en cada carpeta `weekN` (por ejemplo, NumPy, Matplotlib y scikit-learn en semanas con clasificación).
+Los notebooks y scripts están preparados para ejecutarse en **Google Colab** o en un entorno local con Python 3 y las dependencias indicadas en cada carpeta (por ejemplo, NumPy, Matplotlib y scikit-learn).
 
 ### Evidencia por semana (archivos clave)
 
 | Semana | Entrega típica |
-|--------|------------------|
+|--------|----------------|
 | week1 | `ejercicio_neurona_vainilla.ipynb` |
 | week2 | `ejercicio1.py` + README |
 | week3 | `Actividad2_Backpropagation_Funciones_Activacion.ipynb` + README |
-| week4 | `Actividad4_Regularizacion_Red_Neuronal.ipynb` + README (rúbrica y criterios detallados en el README de la semana) |
+| week4 | Índice: `week4/README.md` · Act. 3: `week4/actividad3/` · Act. 4: `week4/actividad4/` + notebook de regularización |
 
 ---
 
