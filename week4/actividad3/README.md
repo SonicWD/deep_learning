@@ -45,7 +45,6 @@ Entrenar un perceptrón multicapa para clasificación binaria comparando **SGD e
 1. Subir el `.ipynb` a [Google Colab](https://colab.research.google.com/) o abrirlo en Jupyter/VS Code con kernel Python 3.
 2. **Ejecutar todas las celdas** (en Colab: Entorno → Ejecutar todo).
 3. La primera celda instala `numpy`, `matplotlib` y `scikit-learn` si hace falta (`%pip`).
-4. Para la entrega académica, conviene descargar el notebook **con las salidas generadas** tras una ejecución completa.
 
 Dependencias: `numpy`, `matplotlib`, `scikit-learn`.
 
