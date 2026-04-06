@@ -40,9 +40,9 @@ Implementar y validar el proceso de aprendizaje de redes neuronales mediante **b
 
 ## Cómo ejecutar el notebook
 
-1. Abre el archivo `Actividad2_Backpropagation_Funciones_Activacion.ipynb` en [Google Colab](https://colab.research.google.com/).
-2. Ejecuta todas las celdas: **Runtime → Run all**.
-3. Revisa las curvas de pérdida, la comparación sigmoid vs ReLU y las conclusiones.
+1. Abrir `Actividad2_Backpropagation_Funciones_Activacion.ipynb` en [Google Colab](https://colab.research.google.com/) (desde el repositorio o subiendo el archivo).
+2. Ejecutar todas las celdas: **Runtime → Run all** (Entorno → Ejecutar todo).
+3. **Salidas:** curvas de pérdida, comparación sigmoide vs ReLU (sección 4.5) y conclusiones al final del cuaderno.
 
 **Dependencias:** `numpy`, `matplotlib`, `scikit-learn` (ya instaladas en Colab; en local: `pip install numpy matplotlib scikit-learn`).
 
@@ -106,10 +106,10 @@ pip install numpy matplotlib scikit-learn
 
 ## 📖 Uso en Google Colab
 
-1. Sube el archivo `Actividad2_Backpropagation_Funciones_Activacion.ipynb` a [Google Colab](https://colab.research.google.com/).
-2. Ejecuta todas las celdas: **Runtime → Run all**.
-3. Revisa las curvas de pérdida y las métricas de accuracy.
-4. Descarga el cuaderno ejecutado: **File → Download → .ipynb** (para entregar como evidencia).
+1. Abrir `Actividad2_Backpropagation_Funciones_Activacion.ipynb` en [Google Colab](https://colab.research.google.com/).
+2. Ejecutar todas las celdas: **Runtime → Run all**.
+3. **Salidas:** curvas de pérdida y métricas de accuracy (train/test) en el resumen final.
+4. Opcional para archivo de evidencia: **File → Download → .ipynb** conservando las salidas generadas.
 
 ---
 
@@ -123,15 +123,15 @@ pip install numpy matplotlib scikit-learn
 
 ---
 
-## 📊 Criterios de calificación (rúbrica)
+## Cobertura técnica (resumen)
 
-| Criterio | Cumplimiento |
-|----------|--------------|
-| **Backpropagation** | Implementado correctamente en los 3 modelos; ajustes de pesos eficientes y resultados consistentes. |
-| **Funciones de activación** | Sigmoide y ReLU integradas; mejoran la capacidad de clasificación binaria. |
-| **Rediseño para clasificación binaria** | Modelos adaptados a dataset binario (etiquetas 0 y 1, una neurona de salida). |
-| **Entrenamiento** | Entrenamiento correcto con dataset binario; resultados claros y bien presentados. |
-| **Claridad y organización** | Código documentado, comentarios claros, estructura lógica. |
+| Aspecto | Contenido en este repositorio |
+|----------|--------------------------------|
+| **Backpropagation** | Implementación en perceptrón, red de una capa y red multicapa. |
+| **Funciones de activación** | Sigmoide y ReLU; comparación directa en capas ocultas (misma configuración). |
+| **Clasificación binaria** | Dataset `make_classification`, etiquetas 0/1, neurona de salida sigmoide. |
+| **Entrenamiento y resultados** | Curvas de pérdida, accuracy train/test, tabla resumen y conclusiones. |
+| **Organización** | Secciones numeradas en el notebook; código comentado. |
 
 ---
 
@@ -159,7 +159,7 @@ pip install numpy matplotlib scikit-learn
 
 - **Pérdida:** Se usa MSE para simplificar; en producción suele usarse entropía cruzada binaria (BCE).
 - **Convergencia:** La pérdida debe disminuir de forma consistente; si no, ajustar `lr` o `epochs`.
-- **Evidencia:** Las curvas de pérdida y las métricas de accuracy sirven como evidencia verificable para la entrega.
+- **Registro del experimento:** Curvas de pérdida y métricas de accuracy en el notebook, reproducibles al ejecutar todas las celdas.
 
 ---
 

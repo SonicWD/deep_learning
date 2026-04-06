@@ -1,10 +1,10 @@
-# Semana 4 – Actividad 4: Regularización en redes neuronales
+# Semana 4 – Actividad 4: Regularización en redes neuronales (Google Colab)
 
 **Curso:** Deep Learning - Conceptos (601539)  
 **Actividad:** Aplicación de métodos de regularización en una red neuronal en Google Colab (REA 1)  
 **Programa:** FU · CAD2202023205 · EIAIPA2026
 
-**Otra entrega de la misma semana:** [Actividad 3 — Técnicas de optimización](../actividad3/README.md) (momentum / RMSprop / Adam vs SGD baseline).
+**Otra entrega de la misma semana:** [Actividad 3 — Optimización](../actividad3/README.md) (SGD vs Adam, mismas condiciones de comparación).
 
 **Archivo principal:** [`Actividad4_Regularizacion_Red_Neuronal.ipynb`](Actividad4_Regularizacion_Red_Neuronal.ipynb) (en esta misma carpeta `week4/actividad4/`).
 
@@ -12,7 +12,13 @@
 
 ## Objetivo
 
-Aplicar **métodos de regularización** a una red neuronal para **reducir el sobreajuste (overfitting)** y mejorar la **generalización**. La evidencia consiste en comparar el desempeño **con y sin** regularización, observando el comportamiento del **loss** y las **métricas** en entrenamiento y evaluación, con un notebook **reproducible** y bien documentado.
+Aplicar **métodos de regularización** a una red neuronal para **reducir el sobreajuste** y mejorar la **generalización**, con evidencia reproducible: **loss** (MSE) y **accuracy** en entrenamiento, validación y test, más gráficos y una interpretación breve impresa junto a la tabla de resultados.
+
+**Método(s) aplicado(s):** **L2 (weight decay)** sobre `W1` y `W2`, y **dropout invertido** en la capa oculta, ambos integrados en forward, backward y actualización de pesos; más un **baseline sin regularización**.
+
+**Comparación realizada (en una frase):** Se entrenan tres veces el **mismo** MLP sobre el **mismo** dataset particionado y escalado, con **iguales** `n_hidden`, `lr`, `epochs` y semilla de pesos, variando únicamente la presencia de L2 o dropout frente al modelo base.
+
+**Resultado principal:** En una corrida típica el **baseline** muestra mayor **brecha train–val**; **L2** y/o **dropout** suelen **acotar el sobreajuste** y pueden **mejorar o igualar accuracy en validación/test** respecto al base (depende de \(\lambda=0.08\) y \(p=0.35\) fijados en código y del sorteo dropout época a época).
 
 ---
 
@@ -36,20 +42,21 @@ Aplicar **métodos de regularización** a una red neuronal para **reducir el sob
 
 ---
 
-## Resultados principales
+## Resultados y evidencia en el notebook
 
-- Tras **Run all**, el **baseline** suele mostrar **más brecha train–val** en accuracy que los modelos con L2 o dropout.
-- **L2** y **dropout** suelen **suavizar** la pérdida en validación o **mejorar** val/test frente al baseline (depende de \(\lambda\), \(p\) y del dataset; el notebook documenta el trade-off).
-- Las **figuras** y la **tabla numérica** son la evidencia verificable para la entrega.
+- Tabla **train / val / test** (accuracy y MSE de validación al final) más un bloque **«Interpretación breve»** tras la tabla.
+- **Dos figuras:** MSE y accuracy vs época (train y val) para baseline, L2 y dropout.
+- Impresión de **brecha train–val** en accuracy al final de la sección de gráficos.
+- **Sección 6 (Markdown):** conclusiones en **(i)** overfitting/underfitting, **(ii)** efecto de la regularización, **(iii)** hallazgos y dificultades.
 
 ---
 
 ## Cómo ejecutar el notebook
 
-1. Abre `actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb` (desde el repo o súbelo) en [Google Colab](https://colab.research.google.com/).
-2. Ejecuta todas las celdas: **Entorno de ejecución → Ejecutar todo** (en inglés: **Runtime → Run all**).
-3. Si aparece un mensaje de **instalación de paquetes**, vuelve a ejecutar la celda de imports del dataset hasta que cargue sin error.
-4. Revisa las **curvas** (loss y accuracy), la **tabla** train/val/test y las **conclusiones**.
+1. Abrir `actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb` en [Google Colab](https://colab.research.google.com/) (desde el repositorio o subiendo el archivo).
+2. Ejecutar todas las celdas: **Entorno de ejecución → Ejecutar todo** (**Runtime → Run all**).
+3. Si una celda pide **instalación de paquetes**, ejecutar de nuevo la celda de imports del dataset hasta completar la carga.
+4. **Salidas:** curvas de pérdida y accuracy (train/val), tabla train/val/test y sección de conclusiones en Markdown.
 
 **Dependencias:** `numpy`, `matplotlib`, `scikit-learn` (suelen venir en Colab; en local: `pip install numpy matplotlib scikit-learn`).
 
@@ -107,10 +114,10 @@ pip install numpy matplotlib scikit-learn
 
 ## 📖 Uso en Google Colab
 
-1. Abre desde GitHub la ruta `week4/actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb` en [Google Colab](https://colab.research.google.com/) o súbelo manualmente.
-2. Ejecuta todas las celdas: **Runtime → Run all** / **Ejecutar todo**.
-3. Verifica que salgan la **tabla** de accuracies y las **dos figuras** (loss y accuracy).
-4. Descarga el cuaderno ejecutado: **File → Download → .ipynb** (evidencia con salidas).
+1. Abrir en [Google Colab](https://colab.research.google.com/) el notebook `week4/actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb` desde GitHub o por carga manual.
+2. Ejecutar todas las celdas: **Runtime → Run all** / **Ejecutar todo**.
+3. Tras ejecutar todo el cuaderno aparecen la **tabla** de accuracies y **dos figuras** comparativas (loss y accuracy).
+4. Opcional: **File → Download → .ipynb** conservando las salidas generadas.
 
 ---
 
@@ -126,28 +133,17 @@ Valores por defecto en el notebook (ajustables): `N_HIDDEN=96`, `LR=0.25`, `EPOC
 
 ---
 
-## 📊 Criterios de calificación (rúbrica)
+## Cobertura técnica (resumen)
 
-### Cumplimiento esperado en esta entrega
+| Aspecto | Contenido en este repositorio |
+|----------|--------------------------------|
+| **Regularización** | L2 y dropout invertido en la capa oculta, integrados en forward, backward y actualización de pesos. |
+| **Justificación** | Sección 2 (Markdown) enlaza cada técnica con generalización y sobreajuste. |
+| **Análisis** | Curvas de loss/accuracy, métricas train/val/test, brecha train–val y conclusiones (sección 6). |
+| **Organización** | Flujo: datos → modelo → entrenamiento comparativo → figuras → conclusiones. |
+| **Comparación** | Baseline sin regularización frente a L2 y dropout; mismos hiperparámetros base e inicialización. |
 
-| Criterio | Cumplimiento |
-|----------|----------------|
-| **Implementación de técnicas de regularización** | Al menos **dos** (L2 y dropout) **desde cero**, integradas en forward/backward y actualización de pesos; código ejecutable de principio a fin. |
-| **Justificación de la selección** | Markdown **§2** vincula cada técnica con generalización y sobreajuste. |
-| **Análisis del impacto** | Curvas de loss/accuracy, métricas train/val/test y texto en **§6** interpretando el efecto. |
-| **Claridad y organización** | Clase documentada, celdas en orden: datos → modelo → entrenamiento → figuras → conclusiones. |
-| **Comparación con y sin regularización** | **Baseline** explícito vs modelos regularizados; mismos hiperparámetros base; gráficos y tabla. |
-
-### Niveles orientativos (curso)
-
-Cada criterio se califica con una escala típica **0.2 – 1.0** según profundidad:
-
-- **1.0:** Implementación completa, justificación sólida, análisis y comparación claros con métricas y gráficos.
-- **0.8:** Cumple bien con detalle mejorable (segunda técnica, visualización o análisis).
-- **0.6–0.4:** Integración o evidencia parcial.
-- **0.2:** Ausente o incorrecto.
-
-(Ajusta la redacción de conclusiones si tu corrida no muestra mejora en test: explicar por qué — hiperparámetros, dataset, varianza de dropout — también cuenta como análisis válido.)
+*Nota:* Si en una corrida concreta val/test no mejora respecto al baseline, el texto de conclusiones puede centrarse en el efecto observado en la brecha train–val, la sensibilidad a \(\lambda\) y \(p\), y la varianza propia del dropout.
 
 ---
 
@@ -177,7 +173,7 @@ Cada criterio se califica con una escala típica **0.2 – 1.0** según profundi
 
 - **Loss en las curvas:** se registra **MSE** sobre predicciones para **comparar** los tres modelos en la misma escala (el término L2 se aplica solo en el **gradiente** del entrenamiento, no en el MSE mostrado).
 - **Sobreajuste:** una **brecha train–val** grande en accuracy suele indicar memorización; la regularización busca **reducirla** sin destruir el ajuste.
-- **Hiperparámetros:** si val/test no mejora, prueba \(\lambda\) más pequeño o \(p\) más bajo antes de concluir que “no sirve” la técnica.
+- **Hiperparámetros:** con val/test por debajo del esperado, conviene ensayar \(\lambda\) o \(p\) más bajos antes de concluir que la técnica no ayuda en este problema.
 
 ---
 

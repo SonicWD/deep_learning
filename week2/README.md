@@ -1,7 +1,6 @@
-# Actividad: Implementación de Redes Neuronales Básicas 
-# avances no final 
+# Semana 2 – Redes neuronales básicas (NumPy)
 
-Este ejercicio implementa tres tipos de redes neuronales desde cero utilizando NumPy, siguiendo los principios fundamentales del deep learning.
+Implementación de tres arquitecturas desde cero con NumPy: perceptrón, red de una capa y red multicapa.
 
 ## 📋 Contenido
 
@@ -207,12 +206,12 @@ Esto ejecutará tres ejemplos:
 
 4. **Convergencia**: El perceptrón converge cuando encuentra una solución (errores = 0). Las redes neuronales pueden necesitar ajuste de hiperparámetros.
 
-## 🔬 Experimentos Sugeridos
+## Extensiones posibles
 
-1. **Variar la tasa de aprendizaje**: Observar cómo afecta la convergencia
-2. **Cambiar funciones de activación**: Comparar sigmoide, tanh y ReLU
-3. **Ajustar arquitectura**: Probar diferentes números de capas y neuronas
-4. **Probar con diferentes datasets**: Iris, Wine, etc.
+1. Variar la tasa de aprendizaje y registrar el efecto en la convergencia.  
+2. Comparar funciones de activación (sigmoide, tanh, ReLU) en la misma tarea.  
+3. Probar distintas profundidades y anchos de capas ocultas.  
+4. Repetir con otros datasets de `sklearn` (por ejemplo Iris, Wine).
 
 ## 📚 Referencias
 

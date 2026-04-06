@@ -32,9 +32,9 @@ deep_learning/
 
 ## Contenido por week
 
-- **Week 1:** Ejercicio neurona en 15 minutos (red vainilla, bias, comportamiento AND). Ver [week1/README.md](week1/README.md).
-- **Week 2:** Implementación de redes neuronales básicas (Perceptrón, red una capa, red multicapa). Ver [week2/README.md](week2/README.md).
-- **Week 3:** Actividad 2 — Backpropagation y funciones de activación (sigmoide, ReLU) en clasificación binaria. Tres modelos: perceptrón, red una capa y red multicapa; comparación explícita sigmoid vs ReLU. Ver [week3/README.md](week3/README.md).
+- **Week 1:** Ejercicio neurona en 15 minutos (red vainilla, bias, comportamiento tipo AND). [week1/README.md](week1/README.md).
+- **Week 2:** Redes neuronales básicas (Perceptrón, red una capa, red multicapa). [week2/README.md](week2/README.md).
+- **Week 3:** Backpropagation y funciones de activación (sigmoide, ReLU); comparación explícita en capas ocultas. [week3/README.md](week3/README.md).
 - **Week 4 (REA 1):** Dos entregas en subcarpetas; índice y enlaces en [week4/README.md](week4/README.md).
   - **Actividad 3 — Optimización:** [week4/actividad3/README.md](week4/actividad3/README.md). Notebook: [week4/actividad3/Actividad3_Optimizacion_Red_Neuronal.ipynb](week4/actividad3/Actividad3_Optimizacion_Red_Neuronal.ipynb).
   - **Actividad 4 — Regularización:** [week4/actividad4/README.md](week4/actividad4/README.md). Notebook: [week4/actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb](week4/actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb).

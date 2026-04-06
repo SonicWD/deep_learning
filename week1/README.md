@@ -3,21 +3,20 @@
 ## Ejercicio práctico: Entiende una neurona en 15 minutos (Red 'vainilla')
 
 ### Objetivo
-Observar cómo cambia la salida de una neurona cuando modificas entradas, pesos (w1, w2) y el sesgo (bias). No necesitas memorizar fórmulas: solo ejecutar, comparar y explicar con tus palabras.
+Observar cómo cambia la salida de una neurona al modificar entradas, pesos (w1, w2) y sesgo (bias). Las respuestas breves van en celdas Markdown del mismo cuaderno.
 
 ### Contenido de esta carpeta
 - **ejercicio_neurona_vainilla.ipynb**: cuaderno con el código base, tres pruebas cambiando solo el bias (b = -0.5, -1.0, -2.0) y respuestas a las preguntas.
 - **README.md**: esta nota/entregable.
 
-### Instrucciones (Google Colab)
-1. Abre Google Colab y crea un cuaderno nuevo (o sube el `.ipynb` de esta carpeta).
-2. Copia y ejecuta el código de la sección "Código base".
-3. Realiza tres pruebas cambiando **solo** el valor de **b** (bias): b = -0.5, b = -1.0, b = -2.0.
-4. Responde las preguntas en una celda Markdown (ya incluidas en el notebook).
+### Ejecución en Google Colab
+1. Abrir `ejercicio_neurona_vainilla.ipynb` en [Google Colab](https://colab.research.google.com/) (nuevo cuaderno con el código importado desde el repo, o subiendo el archivo).
+2. Ejecutar el bloque de la sección **Código base**.
+3. Variante del experimento: tres corridas cambiando **solo** **b** (bias): −0.5, −1.0 y −2.0.
+4. Las preguntas guía están en celdas Markdown dentro del notebook.
 
-### Entregable
-- Sube el notebook (`.ipynb`) y este README a tu repositorio en la carpeta **week1/**.
-- Comparte el enlace de la carpeta week1/ en el aula o por el canal indicado.
+### Ubicación en el repositorio
+- Carpeta **week1/**: `ejercicio_neurona_vainilla.ipynb` y este `README.md`.
 
 ### Preguntas (respondidas en el notebook)
 - ¿Con qué valor de **b** la neurona se comporta más parecido a AND?
