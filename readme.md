@@ -20,14 +20,19 @@ deep_learning/
 ├── week3/                  # Week 3 - Backpropagation y funciones de activación
 │   ├── README.md
 │   └── Actividad2_Backpropagation_Funciones_Activacion.ipynb
-└── week4/                  # Week 4 - REA 1 (Act. 3 y Act. 4)
-    ├── README.md           # Índice de la semana 4
-    ├── actividad3/
-    │   ├── README.md       # Actividad 3 - Optimización
-    │   └── Actividad3_Optimizacion_Red_Neuronal.ipynb
-    └── actividad4/
-        ├── README.md       # Actividad 4 - Regularización
-        └── Actividad4_Regularizacion_Red_Neuronal.ipynb
+├── week4/                  # Week 4 - REA 1 (Act. 3 y Act. 4)
+│   ├── README.md           # Índice de la semana 4
+│   ├── actividad3/
+│   │   ├── README.md       # Actividad 3 - Optimización
+│   │   └── Actividad3_Optimizacion_Red_Neuronal.ipynb
+│   └── actividad4/
+│       ├── README.md       # Actividad 4 - Regularización
+│       └── Actividad4_Regularizacion_Red_Neuronal.ipynb
+└── week5/                  # Week 5 - Act. 5 (multiclase Keras)
+    ├── README.md           # Índice de la semana 5
+    └── actividad5/
+        ├── README.md
+        └── Actividad5_Clasificacion_Multiclase_Keras.ipynb
 ```
 
 ## Contenido por week
@@ -38,6 +43,7 @@ deep_learning/
 - **Week 4 (REA 1):** Dos entregas en subcarpetas; índice y enlaces en [week4/README.md](week4/README.md).
   - **Actividad 3 — Optimización:** [week4/actividad3/README.md](week4/actividad3/README.md). Notebook: [week4/actividad3/Actividad3_Optimizacion_Red_Neuronal.ipynb](week4/actividad3/Actividad3_Optimizacion_Red_Neuronal.ipynb).
   - **Actividad 4 — Regularización:** [week4/actividad4/README.md](week4/actividad4/README.md). Notebook: [week4/actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb](week4/actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb).
+- **Week 5 — Actividad 5:** Clasificación multiclase con MLP en Keras (sin convolución). Índice: [week5/README.md](week5/README.md). Notebook: [week5/actividad5/Actividad5_Clasificacion_Multiclase_Keras.ipynb](week5/actividad5/Actividad5_Clasificacion_Multiclase_Keras.ipynb).
 
 ## Cómo usar este repositorio
 
@@ -51,6 +57,7 @@ Los notebooks y scripts están preparados para ejecutarse en **Google Colab** o 
 | week2 | `ejercicio1.py` + README |
 | week3 | `Actividad2_Backpropagation_Funciones_Activacion.ipynb` + README |
 | week4 | Índice: `week4/README.md` · Act. 3: `week4/actividad3/` · Act. 4: `week4/actividad4/` + notebook de regularización |
+| week5 | Índice: `week5/README.md` · Act. 5: `week5/actividad5/Actividad5_Clasificacion_Multiclase_Keras.ipynb` |
 
 ---
 
