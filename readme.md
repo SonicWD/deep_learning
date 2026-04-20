@@ -28,11 +28,16 @@ deep_learning/
 │   └── actividad4/
 │       ├── README.md       # Actividad 4 - Regularización
 │       └── Actividad4_Regularizacion_Red_Neuronal.ipynb
-└── week5/                  # Week 5 - Act. 5 (multiclase Keras)
-    ├── README.md           # Índice de la semana 5
-    └── actividad5/
+├── week5/                  # Week 5 - Act. 5 (multiclase Keras)
+│   ├── README.md           # Índice de la semana 5
+│   └── actividad5/
+│       ├── README.md
+│       └── Actividad5_Clasificacion_Multiclase_Keras.ipynb
+└── week6/                  # Week 6 - Act. 6 (métricas, preprocesamiento, regularización Keras)
+    ├── README.md
+    └── actividad6/
         ├── README.md
-        └── Actividad5_Clasificacion_Multiclase_Keras.ipynb
+        └── Actividad6_Metricas_Preprocesamiento_Regularizacion_Keras.ipynb
 ```
 
 ## Contenido por week
@@ -44,6 +49,7 @@ deep_learning/
   - **Actividad 3 — Optimización:** [week4/actividad3/README.md](week4/actividad3/README.md). Notebook: [week4/actividad3/Actividad3_Optimizacion_Red_Neuronal.ipynb](week4/actividad3/Actividad3_Optimizacion_Red_Neuronal.ipynb).
   - **Actividad 4 — Regularización:** [week4/actividad4/README.md](week4/actividad4/README.md). Notebook: [week4/actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb](week4/actividad4/Actividad4_Regularizacion_Red_Neuronal.ipynb).
 - **Week 5 — Actividad 5:** Clasificación multiclase con MLP en Keras (sin convolución). Índice: [week5/README.md](week5/README.md). Notebook: [week5/actividad5/Actividad5_Clasificacion_Multiclase_Keras.ipynb](week5/actividad5/Actividad5_Clasificacion_Multiclase_Keras.ipynb).
+- **Week 6 — Actividad 6 (REA 1):** Métricas, preprocesamiento y regularización (base vs L2+dropout) en Keras/Colab. Índice: [week6/README.md](week6/README.md). Notebook: [week6/actividad6/Actividad6_Metricas_Preprocesamiento_Regularizacion_Keras.ipynb](week6/actividad6/Actividad6_Metricas_Preprocesamiento_Regularizacion_Keras.ipynb).
 
 ## Cómo usar este repositorio
 
@@ -58,6 +64,7 @@ Los notebooks y scripts están preparados para ejecutarse en **Google Colab** o 
 | week3 | `Actividad2_Backpropagation_Funciones_Activacion.ipynb` + README |
 | week4 | Índice: `week4/README.md` · Act. 3: `week4/actividad3/` · Act. 4: `week4/actividad4/` + notebook de regularización |
 | week5 | Índice: `week5/README.md` · Act. 5: `week5/actividad5/Actividad5_Clasificacion_Multiclase_Keras.ipynb` |
+| week6 | Índice: `week6/README.md` · Act. 6: `week6/actividad6/Actividad6_Metricas_Preprocesamiento_Regularizacion_Keras.ipynb` |
 
 ---
 
