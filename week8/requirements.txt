@@ -1,0 +1,6 @@
+# TensorFlow: usar Python 3.10, 3.11 o 3.12 (recomendado). Python 3.13 puede fallar en Windows.
+tensorflow>=2.15
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+jupyter>=1.0.0
